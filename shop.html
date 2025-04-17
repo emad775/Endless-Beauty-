@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+
+
+  
+    <!-- external css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/png1 (2).png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" 
+    crossorigin="anonymous" /> 
+
+    <style>
+        .hero{
+            background-image: url('./img/shop.jpg');
+        }
+       
+     
+       .product h2{
+        margin: 0;
+       }
+        .product h3{
+            text-shadow: none;
+            margin-top: 0.5rem ;
+            margin-bottom: 0;
+            color: #8a8889;
+        }
+        .full-image img{
+         object-fit: cover;
+        }
+
+    </style>
+
+
+</head>
+<body>
+ <div class="hero">
+    <!-- navbar -->
+    <nav>
+        <ul>
+            <a href="./index.html">
+                <li id="beand-name">Flowers</li>
+            </a>
+            <a href="./shop.html" id="currentPage">
+                <li>Shop</li>
+            </a>
+            <a href="./Contac.html">
+                <li>Contact Us</li>
+            </a>
+            <a href="./aboutUs.html">
+                <li>About Us</li>
+            </a>
+			
+        </ul>
+     </nav>
+    
+ </div> 
+  <main style="margin-top: 0; padding-top: 0;">
+    <h1>Trending products</h1>
+    <div class="products_container">
+
+        <!-- product-1 -->
+        <div class="product">
+            <div class="product_iamge" style="background-color: #beac95;">
+                <img src="./shop/h3.png" alt=""> 
+            </div>
+            <h3>20<small>x</small>Flowers</h3>
+               <h2>Bouquet of purity <span>300 SAR</span></h2>
+        </div>
+
+         <!-- product-2 -->
+        <div class="product">
+            <div class="product_iamge" style="background-color: #beac95;">
+                <img src="./shop/h2.png" alt=""> 
+            </div>
+            <h3>30<small>x</small>Flowers</h3>
+               <h2> Bouquet I Love<span>350 SAR</span></h2>
+        </div>
+
+         <!-- product-3 -->
+        <div class="product">
+            <div class="product_iamge" style="background-color: #beac95;">
+                <img src="./shop/h4.png" alt=""> 
+            </div>
+            <h3>20<small>x</small>Flowers</h3>
+               <h2>Bouquet of Joy <span>300 SAR</span></h2>
+        </div>
+       <!-- product-4 -->
+       <div class="product">
+        <div class="product_iamge full-image" >
+            <img src="./shop/h5.jpg" alt=""> 
+        </div>
+        <h3>30<small>x</small>Flowers</h3>
+           <h2>White Box <span>250 SAR</span></h2>
+    </div>
+  <!-- product-5 -->
+  <div class="product">
+    <div class="product_iamge full-image" >
+        <img src="./shop/h6.jpg" alt=""> 
+    </div>
+    <h3>25<small>x</small>Flowers</h3>
+       <h2>Discovery Box <span>400 SAR</span></h2>
+</div>
+   <!-- product-6 -->
+   <div class="product">
+    <div class="product_iamge full-image" >
+        <img src="./shop/h7.jpg" alt=""> 
+    </div>
+    <h3>25<small>x</small>Flowers</h3>
+       <h2>Bouquet of Mystery <span>300 SAR</span></h2>
+</div>
+  <!-- product-7 -->
+  <div class="product">
+    <div class="product_iamge full-image" >
+        <img src="./shop/h8.jpg" alt=""> 
+    </div>
+    <h3>35<small>x</small>Flowers</h3>
+       <h2>Queen's Bouquet<span>450 SAR</span></h2>
+</div>
+  <!-- product-8 -->
+  <div class="product">
+    <div class="product_iamge full-image" >
+        <img src="./shop/h9.jpg" alt=""> 
+    </div>
+    <h3>20<small>x</small>Flowers</h3>
+       <h2>Morning Bouquet<span>250 SAR</span></h2>
+</div>
+  <!-- product-9 -->
+  <div class="product">
+    <div class="product_iamge full-image" >
+        <img src="./shop/h10.jpg" alt=""> 
+    </div>
+    <h3>25<small>x</small>Flowers</h3>
+       <h2>Spring Bouquet<span>300 SAR</span></h2>
+</div>
+
+
+
+ 
+ 
+
+    </div>
+  </main>
+ 
+ <footer>
+    <a href="https://www.facebook.com/" target="_blank">
+        <i class="fab fa-facebook-square"></i>
+    </a>
+
+    <a href="https://www.twitter.com/" target="_blank">
+        <i class="fab fa-twitter-square"></i>
+    </a>
+
+    <a href="https://www.instagram.com/" target="_blank">
+        <i class="fab fa-instagram-square"></i>
+    </a>
+ </footer>
+<script>
+// تكبير الصورة عند المرور بالماوس
+const products = document.querySelectorAll('.product');
+
+products.forEach(product => {
+    const image = product.querySelector('img');
+    
+    product.addEventListener('mouseenter', () => {
+        image.style.transform = 'scale(1.1)';
+        image.style.transition = 'transform 0.3s ease';
+    });
+
+    product.addEventListener('mouseleave', () => {
+        image.style.transform = 'scale(1)';
+    });
+
+    // عند الضغط على المنتج يظهر تنبيه باسم الباقة وسعرها
+    product.addEventListener('click', () => {
+        const name = product.querySelector('h2').childNodes[0].textContent.trim();
+        const price = product.querySelector('span').textContent.trim();
+        alert(`You selected: ${name} - Price: ${price}`);
+    });
+});
+</script>
+</body>
+</html>

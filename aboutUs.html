@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+
+  
+    <!-- external css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/png1 (2).png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" 
+    crossorigin="anonymous" /> 
+  <style>
+
+.about-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  /*  background-color:#fff;*/
+    height: 75vh;
+}
+h2{
+    font-size: 2em;
+
+}
+.about-container{
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.about-table{
+    
+    width: 40rem;
+
+}
+table{
+    width: 25rem;
+    text-align: center;
+    
+
+}
+table,th,td{
+ border-collapse: collapse;
+ padding: 1rem ;
+ background-color: #fbe5e95a;
+
+}
+th{
+    border-bottom: 2px solid #6a1a38;
+    color: whitesmoke;
+    font-size: x-large;
+    background-color: #d9a1a574;
+    letter-spacing: 3px;
+
+}
+tr{
+    box-shadow: rgba(147, 120, 128, 0.143) 0px 10px 10px 0px;
+}
+h2{
+
+    text-align: center;
+}
+
+
+
+
+
+
+  </style>
+ 
+</head>
+
+<body>
+    
+
+<!-- navbar -->
+<nav>
+    <ul>
+        <a href="./index.html">
+            <li id="beand-name">Flowers</li>
+        </a>
+        <a href="./shop.html" id="currentPage">
+            <li>Shop</li>
+        </a>
+        <a href="./Contac.html" >
+            <li>Contact Us</li>
+        </a>
+        <a href="./aboutUs.html" id="currentPage">
+            <li>About Us</li>
+        </a>
+    </ul>
+ </nav>
+
+
+    
+   
+    <h2>About The Student Information</h2>
+    <div class="about-container">
+   
+        
+        <div class="video-container">
+            <video controls width="200" height="auto">
+                <source src="video.mp4" type="video/mp4">
+        </div>
+        <div class="about-table">
+            <table>
+                <th>
+                    <tr>
+                        <th>Name</th>
+                        <th>Academic ID</th>
+                    </tr>
+                </th>
+                <tbody>
+                    <tr>
+                        <td>Rana Ali Al-Qahtani</td>
+                        <td>441804876</td>
+                    </tr>
+					 <tr>
+                        <td>Nora saif Alshrani </td>
+                        <td>441803835</td>
+                    </tr>
+					<tr>
+                        <td>Sarah megad Alsaadi </td>
+                        <td>440802383</td>
+                    </tr>
+					<tr>
+                        <td>Nawal Mohammed Alharthi </td>
+                        <td>439800880</td>
+                    </tr>
+					<tr>
+                        <td>Nora faiz Alshahrani </td>
+                        <td>441804970</td>
+                    </tr>
+					<tr>
+                        <td>Nora Mohammed AlDahrami </td>
+                        <td>441803176</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            
+        </div>
+        
+    </div>
+    
+    
+
+        <footer>
+            <a href="https://www.facebook.com/" target="_blank">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+        
+            <a href="https://www.twitter.com/" target="_blank">
+                <i class="fab fa-twitter-square"></i>
+            </a>
+        
+            <a href="https://www.instagram.com/" target="_blank">
+                <i class="fab fa-instagram-square"></i>
+            </a>
+         </footer>
+
+<script>
+// تغيير لون الصف عند المرور بالماوس
+const rows = document.querySelectorAll('table tbody tr');
+
+rows.forEach(row => {
+    row.addEventListener('mouseover', () => {
+        row.style.backgroundColor = '#ffe4e1';
+    });
+
+    row.addEventListener('mouseout', () => {
+        row.style.backgroundColor = '#fbe5e95a';
+    });
+
+    row.addEventListener('click', () => {
+        const name = row.cells[0].textContent;
+        alert(`Hello! You clicked on ${name}`);
+    });
+});
+
+// جعل الفيديو يعمل عند المرور بالماوس ويتوقف عند الإبعاد
+const video = document.querySelector('.video-container video');
+
+video.addEventListener('mouseover', () => {
+    video.play();
+});
+
+video.addEventListener('mouseout', () => {
+    video.pause();
+});
+</script>	
+</body>
+
+
+
+</html>
